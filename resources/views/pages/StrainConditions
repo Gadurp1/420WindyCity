@@ -1,0 +1,235 @@
+
+  <script>
+  $(function() {
+    var availableTags = [
+"addadhd","alzheimers","anorexia","anxiety","arthritis","asthma","bipolardisorder","cachexia","cancer","crohnsdisease","epilepsy","fibromyalgia","gastrointestinaldisorder","glaucoma","hivaids","hypertension","migraines","multiplesclerosis","musculardystrophy","parkinsons","phantomlimbpain","pms","ptsd","spinalcordinjury","tinnitus","tourettessyndrome "
+    ];
+    $( "#tags" ).autocomplete({
+      source: availableTags
+    });
+  });
+  </script>
+
+        <!-- CONTENT -->
+
+        <!-- Intro Section -->
+        <section class="inner-intro bg-img overlay-dark light-color parallax parallax-background2" style="background:url('http://i.huffpost.com/gen/1192715/images/o-MARIJUANA-DISPENSARY-facebook.jpg')">
+             <div class="container">
+                <div class="row title">
+                    <h1>What's Your Condintion?</h1>
+
+                        <form class="contact-form" id="contact" role="form">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <div class="col-md-12">
+                                    <div class="row>">
+                                        <div class="ui-widget">                               
+                                    <input class="col-sm-12 ghost-white" id="tags">
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6">  
+                                            <button href="" class="btn btn-md btn-success form-full">Search</button>                          
+                                        </div>
+
+                                        <div class="col-md-6">  
+                                            <!-- Single button -->
+                                            <div class="btn-group col-md-12">
+                                              <button type="button" class=" btn btn-md btn-primary form-full dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Filters <span class="caret"></span>
+                                              </button>
+                                              <ul class="dropdown-menu">
+                                                <li><a href="#">Action</a></li>
+                                                <li><a href="#">Another action</a></li>
+                                                <li><a href="#">Something else here</a></li>
+                                                <li role="separator" class="divider"></li>
+                                                <li><a href="#">Separated link</a></li>
+                                              </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        </form>
+
+
+                </div>
+            </div>
+        </section>
+        <div class="clearfix"></div>
+        <!-- End Intro Section -->
+
+        <!-- Work Detail Section -->
+        <section class="ptb-3" style="overflow:hidden">
+            <div class="container">
+                <!-- work Filter -->
+                <div class="row">                    
+
+
+                   
+                </div>
+                <!-- End work Filter -->
+                <div class="container-grid nf-col-5 ">
+                    <!doctype html>
+                    <head>
+                        <title>Leafly Test</title>
+                        <style type="text/css">
+                        body{ font: 14px helvetica,sans-serif; color: #433; }
+                        </style>
+                    </head>
+                    <body>
+<h2>What Conditions Qualify?</h2>
+
+            <ul class="list-group col-md-6">
+                <li class="list-group-item">Syringomyelia</li>
+                <li class="list-group-item">Spinal Cord Injury</li>
+                <li class="list-group-item">Traumatic Brain Injury and Post- Concussion Syndrome</li>
+                <li class="list-group-item">Multiple Sclerosis</li>
+                <li class="list-group-item">Arnold-chiari Malformation</li>
+                <li class="list-group-item">Cancer</li>
+                <li class="list-group-item">Glaucoma</li>
+                <li class="list-group-item">Hiv/Aids</li>
+                <li class="list-group-item">Hepatitis C</li>
+                <li class="list-group-item">Amyotrophic Lateral Sclerosis</li>
+                <li class="list-group-item">Crohn’s Disease</li>
+                <li class="list-group-item">Agitation of Alzheimer’s Disease</li>
+                <li class="list-group-item">Wasting Syndrome</li>
+                <li class="list-group-item">Muscular Dystrophy</li>
+                <li class="list-group-item">Severe Fibromyalgia</li>
+                <li class="list-group-item">Spinal Cord Disease</li>
+                <li class="list-group-item">Tarlov Cysts</li>
+                <li class="list-group-item">Hydromyelia</li>
+            </ul>
+            <ul class="list-group col-md-6">
+
+                <li class="list-group-item">Spinocerebellar Ataxia</li>
+                <li class="list-group-item">Parkinson’s Disease</li>
+                <li class="list-group-item">Tourette Syndrome</li>
+                <li class="list-group-item">Myoclonus</li>
+                <li class="list-group-item">Dystonia</li>
+                <li class="list-group-item">Reflex Sympathetic Dystrophy</li>
+                <li class="list-group-item">Causalgia</li>
+                <li class="list-group-item">Neurofibromatosis</li>
+                <li class="list-group-item">Chronic Inflammatory Demyelinating Polyneuropathy</li>
+                <li class="list-group-item">Sjögren’s Syndrome</li>
+                <li class="list-group-item">Lupus</li>
+                <li class="list-group-item">Interstitial Cystitis</li>
+                <li class="list-group-item">Myasthenia Gravis</li>
+                <li class="list-group-item">Rheumatoid Arthritis</li>
+                <li class="list-group-item">Hydrocephalus</li>
+                <li class="list-group-item">Nail Patella Syndrome</li>
+                <li class="list-group-item">Residual Limb Pain or The Treatment of These Conditions.</li>
+           
+                <li class="list-group-item">Residual Limb Pain or The Treatment of These Conditions.</li>
+            </ul>
+
+
+                    <?php
+
+                    $api_url = 'http://data.leafly.com';
+                    $app_id = '91768d00';
+                    $app_key = 'fa557088ad73a02196ab929a1be0437b';
+
+                    include(app_path().'/includes/leafly/utils.php');
+                    include(app_path().'/includes/leafly/src/leafly.php');
+
+                    Leafly_Connector::init( $app_id, $app_key );
+
+                    $strains = new Leafly_Strains();
+
+                    if ( isset( $_GET['strain'] ) )
+                    {
+                        $strain = $strains->get_strain( '' );
+                    }
+
+                    if ( isset( $_GET['symptom'] ) )
+                    {
+
+                        $symptoms = $_GET['symptom'];
+
+                    }
+                    else{
+
+
+                        $symptoms='';
+                     }
+
+
+
+
+
+                    $search = $strains->search( array( 'take' => 20, 'page' => 0, 'Condition' => 'addadhd' ) );
+
+
+
+
+
+                    foreach ( $search->Strains as $strain )
+                    {
+                    ?>
+
+
+                    <div class="container">
+                    <div class="nf-item 
+
+
+                            <?php echo $strain->Category; ?>
+
+                            spacing
+
+                <?php if ($strain->Category=='hybrid')
+
+                {
+                    echo 'bg-blue ';
+                }
+                elseif($strain->Category=='indica')
+                {
+                    echo 'bg-red ';
+
+                }
+                elseif($strain->Category=='sativa')
+                {
+                    echo 'bg-white ';
+
+                }
+        ?>
+
+                            ">
+                        <div class="item-box">
+                            <a href="Medical-Marijuana-Strain-Guide/<?php echo $strain->Name; ?>">
+                                <img alt="1" src="https://snap-photos.s3.amazonaws.com/img-thumbs/280h/I9ZF8UC1GE.jpg" class="item-container">
+                                <div class="item-mask item-mask-strain">
+                                    <div class="item-caption text-center">
+                                        <h2 class="white symbol "><?php echo $strain->Symbol; ?></h2>
+
+                                        <h5 class="white"><?php echo $strain->Name; ?></h5>
+                                         <p><img class="col-md-6 pull-right" src="<?php echo $strain->StarImage; ?>"></p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <?php
+                    }
+
+                    ?>
+                    </div>
+
+
+                    </body>
+                    </html>
+
+
+                    
+                </div>
+
+            </div>
+
+        </section>
+        <!-- End Work Detail Section -->
+
+    <!-- End CONTENT -->
+

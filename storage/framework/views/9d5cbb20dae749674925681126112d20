@@ -1,0 +1,125 @@
+
+
+        <!-- HEADER -->
+        <header class="header " >
+            <div class="container">
+
+                <!-- logo -->
+                <div class="logo">
+                    <a href="<?php echo e(URL::to('')); ?>">
+                        <img class="l-black" src="<?php echo e(asset('sximo/themes/420/img/logo-horizontal-white.png')); ?>" />
+                        <img class="l-white" src="<?php echo e(asset('sximo/themes/420/img/logo-horizontal-white.png')); ?>" />
+                        <img class="l-color" src="<?php echo e(asset('sximo/themes/420/img/logo-horizontal-black.png')); ?>" />
+                    </a>
+                </div>
+                <!--End logo-->
+
+                <!-- Rightside Menu (Search, Cart, Bart icon) -->
+                <div class="side-menu-btn">
+                    <ul>
+                        <!-- Search Icon -->
+                        <li class="">
+                            <a class="right-icon search toggle-menu menu-top push-body"><i class="fa fa-search"></i></a>
+                        </li>
+                        <!-- End Search Icon -->
+
+                    </ul>
+                </div>
+                <!-- End Rightside Menu -->
+
+                <!-- Navigation Menu -->
+                <nav class='navigation'>
+
+					<?php /**/ $menus = SiteHelpers::menus('top') /**/ ?>
+					 	  <ul>
+							<?php foreach($menus as $menu): ?>
+								 <li class="<?php if(Request::is($menu['module'])): ?> active <?php endif; ?>" >
+								 	<a 
+									<?php if($menu['menu_type'] =='external'): ?>
+										href="<?php echo e(URL::to($menu['url'])); ?>" 
+									<?php else: ?>
+										href="<?php echo e(URL::to($menu['module'])); ?>" 
+									<?php endif; ?>
+								 
+									 <?php if(count($menu['childs']) > 0 ): ?> class="dropdown-toggle" data-toggle="dropdown" <?php endif; ?>>
+								 		<i class="<?php echo e($menu['menu_icons']); ?>"></i> <span>
+										
+										<?php if(CNF_MULTILANG ==1 && isset($menu['menu_lang']['title'][Session::get('lang')])): ?>
+											<?php echo e($menu['menu_lang']['title'][Session::get('lang')]); ?>
+
+										<?php else: ?>
+											<?php echo e($menu['menu_name']); ?>
+
+										<?php endif; ?>	
+									
+										</span>
+										<?php if(count($menu['childs']) > 0 ): ?>
+										 <b class="caret"></b> 
+										<?php endif; ?>  
+									</a> 
+									<?php if(count($menu['childs']) > 0): ?>
+										 <ul class="nav-dropdown">
+											<?php foreach($menu['childs'] as $menu2): ?>
+											 <li class=" 
+											 <?php if(count($menu2['childs']) > 0): ?> dropdown-submenu <?php endif; ?>
+											 <?php if(Request::is($menu2['module'])): ?> active <?php endif; ?>">
+											 	<a 
+													<?php if($menu2['menu_type'] =='external'): ?>
+														href="<?php echo e(URL::to($menu2['url'])); ?>" 
+													<?php else: ?>
+														href="<?php echo e(URL::to($menu2['module'])); ?>" 
+													<?php endif; ?>
+																
+												>
+													<i class="<?php echo e($menu2['menu_icons']); ?>"></i> 
+														<?php if(CNF_MULTILANG ==1 && isset($menu2['menu_lang']['title'][Session::get('lang')])): ?>
+															<?php echo e($menu2['menu_lang']['title'][Session::get('lang')]); ?>
+
+														<?php else: ?>
+															<?php echo e($menu2['menu_name']); ?>
+
+														<?php endif; ?>
+													
+												</a> 
+												<?php if(count($menu2['childs']) > 0): ?>
+												<ul class="nav-dropdown">
+													<?php foreach($menu2['childs'] as $menu3): ?>
+														<li <?php if(Request::is($menu3['module'])): ?> class="active" <?php endif; ?>>
+															<a 
+																<?php if($menu3['menu_type'] =='external'): ?>
+																	href="<?php echo e(URL::to($menu3['url'])); ?>" 
+																<?php else: ?>
+																	href="<?php echo e(URL::to($menu3['module'])); ?>" 
+																<?php endif; ?>										
+															
+															>
+																<span>
+																<?php if(CNF_MULTILANG ==1 && isset($menu3['menu_lang']['title'][Session::get('lang')])): ?>
+																	<?php echo e($menu3['menu_lang']['title'][Session::get('lang')]); ?>
+
+																<?php else: ?>
+																	<?php echo e($menu3['menu_name']); ?>
+
+																<?php endif; ?>
+																
+																</span>  
+															</a>
+														</li>	
+													<?php endforeach; ?>
+												</ul>
+												<?php endif; ?>							
+												
+											</li>							
+											<?php endforeach; ?>
+										</ul>
+									<?php endif; ?>
+								</li>
+							<?php endforeach; ?>  
+					  </ul> 
+
+                  </nav>
+                <!--End Navigation Menu -->
+
+            </div>
+        </header>
+ 

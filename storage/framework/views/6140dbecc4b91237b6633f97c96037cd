@@ -1,0 +1,84 @@
+
+
+<?php $__env->startSection('content'); ?>
+<div class="page-content row">
+    <!-- Page header -->
+    <div class="page-header">
+      <div class="page-title">
+        <h3> <?php echo e($pageTitle); ?> <small><?php echo e($pageNote); ?></small></h3>
+      </div>
+      <ul class="breadcrumb">
+        <li><a href="<?php echo e(URL::to('dashboard')); ?>"><?php echo e(Lang::get('core.home')); ?></a></li>
+		<li><a href="<?php echo e(URL::to('blog?return='.$return)); ?>"><?php echo e($pageTitle); ?></a></li>
+        <li class="active"> Categories </li>
+      </ul>
+	 </div>  
+	 
+	 
+ 	<div class="page-content-wrapper m-t"> 
+    <div class="sbox animated fadeInRight">
+      <div class="sbox-title"> <h4> <i class="fa fa-table"></i> </h4></div>
+      <div class="sbox-content">  
+          <div class="toolbar-line ">
+          <?php if($access['is_add'] ==1): ?>
+            <a href="<?php echo e(URL::to('blog/categoriesupdate')); ?>" class="tips btn btn-sm btn-white"
+              onclick="SximoModal(this.href ,' Categories'); return false;"
+              title="<?php echo e(Lang::get('core.btn_create')); ?>">
+          <i class="fa fa-plus-circle "></i>&nbsp;<?php echo e(Lang::get('core.btn_create')); ?></a>
+          <?php endif; ?>  
+          <?php if($access['is_remove'] ==1): ?>
+          <a href="javascript://ajax"  onclick="SximoDelete();" class="tips btn btn-sm btn-white" title="<?php echo e(Lang::get('core.btn_remove')); ?>">
+          <i class="fa fa-minus-circle "></i>&nbsp;<?php echo e(Lang::get('core.btn_remove')); ?></a>
+          <?php endif; ?>    
+         
+        </div>  
+
+        <div class="table-responsive">
+           <?php echo Form::open(array('url'=>'blog/categoriesdelete/', 'class'=>'form-horizontal' ,'id' =>'SximoTable' )); ?>
+
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                
+                <th width="50"> <input type="checkbox" class="checkall" /></th>
+                 <th width="50"> ID </th>
+                <th> Category </th>
+                <th> Alias </th>
+               
+                <th width="100"> Action </th>
+              </tr>
+
+            </thead>
+
+            <tbody>
+             
+                  <?php foreach($categories as $cat): ?>
+                <tr>   
+                  <td width="50"><input type="checkbox" class="ids" name="id[]" value="<?php echo e($cat->CatID); ?>" />  </td>
+                  <td><?php echo e($cat->CatID); ?></td>
+                  <td><?php echo e($cat->name); ?></td>
+                  <td><?php echo e($cat->alias); ?></td>
+                  
+                  <td>
+                      <a href="<?php echo e(url('blog/categoriesupdate/'.$cat->CatID)); ?>" onclick="SximoModal(this.href ,' Categories'); return false;" class="btn btn-xs btn-white"><i class="fa fa-edit"></i></a>
+                      
+                  </td>
+                 </tr>  
+                  <?php endforeach; ?>
+             
+
+            </tbody>
+          </table>
+          <?php echo Form::close(); ?>
+
+        </div>
+
+      </div>
+    </div>  
+
+
+  </div>
+</div>  
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

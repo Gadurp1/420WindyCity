@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicone Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="apple-touch-icon" href="img/favicon.png">
+
+    <!-- CSS -->
+    <link href="<?php echo e(asset('sximo/themes/420/css/normalize.css')); ?>" rel="stylesheet" type="text/css" />
+    <link href="<?php echo e(asset('sximo/themes/420/css/navigation.css')); ?>" rel="stylesheet" type="text/css" />
+
+    <link href="<?php echo e(asset('sximo/themes/420/css/style.css')); ?>" rel="stylesheet" type="text/css" />
+    <link href="<?php echo e(asset('sximo/themes/420/css/bootstrap.css')); ?>" rel="stylesheet" type="text/css" />
+    <link href="<?php echo e(asset('sximo/themes/420/css/ionicons.css')); ?>" rel="stylesheet" type="text/css" />
+    <link href="<?php echo e(asset('sximo/themes/420/css/plugin/jPushMenu.css')); ?>" rel="stylesheet" type="text/css" />
+    <link href="<?php echo e(asset('sximo/themes/420/css/plugin/animate.css')); ?>" rel="stylesheet" type="text/css" />
+
+
+<!-- Anthony Search Bar-->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <link href="<?php echo e(asset('sximo/themes/420/css/style-420.css')); ?>" rel="stylesheet" type="text/css" />
+
+    <style>
+@font-face {
+    font-family: 'modern_sansregular';
+    src: url('<?php echo e(asset("sximo/themes/420/fonts/moderne_sans-webfont.eot")); ?>');
+    src: url('<?php echo e(asset("sximo/themes/420/fonts/moderne_sans-webfont.eot?#iefix")); ?>') format('embedded-opentype'),
+         url('<?php echo e(asset("sximo/themes/420/fonts/moderne_sans-webfont.woff2")); ?>') format('woff2'),
+         url('<?php echo e(asset("sximo/themes/420/fonts/moderne_sans-webfont.woff")); ?>') format('woff'),
+         url('<?php echo e(asset("sximo/themes/420/fonts/moderne_sans-webfont.ttf")); ?>') format('truetype'),
+         url('<?php echo e(asset("sximo/themes/420/fonts/moderne_sans-webfont.svg#modern_sansregular")); ?>') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+    </style>
+    </head>
+
+<body class="full-intro background--dark">
+<?php echo $__env->make('layouts/sximone/topbar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<div style="min-height:400px;">
+        <!-- Intro Section -->
+        <section class="inner-intro bg-img overlay-dark light-color parallax parallax-background2" style="background-image: url('../<?php echo e($slug->image); ?>');">
+            <div class="container">
+                <div class="row title">
+                    <h1 class="col-md-10 col-md-offset-1"><?php echo e($slug->title); ?></h1>
+                </div>
+            </div>
+        </section>
+        <div class="clearfix"></div>
+        <!-- End Intro Section -->
+
+        <!-- Blog Post Section -->
+        <section class="">
+            <div class="container">
+                <div class="row">
+                    <!-- Post Bar -->
+                    <div class="col-lg-8 col-md-8 blog-post-hr">
+                        <div class="blog-post mb-2">
+                            <div class="post-meta"><span>by <a>Summer Meza</a>,</span> <span>July 7, 2015</span></div>
+
+
+
+                            <div class="post-entry " style="color:#000">
+                                <?php echo $slug->content; ?> 
+                            </div>
+
+                            <div class="post-tag pull-left"><span><a>Science</a>,</span><span><a>Influence</a></span></div>
+                        </div>
+
+                        <hr />
+
+                        <div class="post-author">
+                            <div class="post-author-img pull-left">
+                                <img alt="author" src="img/img/blog-writer.jpg">
+                            </div>
+                            <div class="post-author-details pull-left">
+                                <h6>Summer Meza</h6>
+                                <ul class="social">
+                                    <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="https://www.twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="https://www.dribbble.com/" target="_blank"><i class="fa fa-dribbble"></i></a></li>
+                                    <li><a href="https://www.pinterest.com/" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+                                    <li><a href="https://www.behance.net/" target="_blank"><i class="fa fa-behance"></i></a></li>
+                                </ul>
+
+                            </div>
+                        </div>
+
+                        <hr />
+
+                        <div class="clearfix"></div>
+
+                        <div class="post-comment mtb-30">
+                    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = '420windycity';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                        </div>
+
+                    </div>
+                    <!-- End Post Bar -->
+                    <div class="col-lg-3 pull-right col-md-3 mt-sm-30">
+
+                    <?php echo $__env->make('blogs.sidebar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+                    </div>
+            </div>
+        </section>
+        <!-- End Blog Post Section -->
+
+        <!-- Post Next Prev Bar -->
+        <section class="mb-2">
+            <div class="container">
+                <div class="item-nav">
+                    <a href="" class="item-prev">
+                        <div class="prev-btn"><i class="fa fa-angle-left"></i></div>
+                        <div class="item-prev-text xs-hidden">
+                            <h6>Prev Post</h6>
+                        </div>
+                    </a>
+
+                    <a class="item-all-view">
+                        <h6>Blog Page</h6>
+                    </a>
+
+                    <a href="" class="item-next">
+                        <div class="next-btn"><i class="fa fa-angle-right"></i></div>
+                        <div class="item-next-text xs-hidden">
+                            <h6>Next Post</h6>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- End Post Next Prev Bar -->
+        <div class="modal-body" id="sximo-modal-content">
+    
+        </div>
+    </div>
+</div>
+</div>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')}}"></script>
+    
+<script>
+    jQuery(document).ready(function() {
+
+        window.prettyPrint && prettyPrint();
+    });
+</script>   
+</body> 
+  <script src="<?php echo e(asset('sximo/themes/420/js/jquery-1.11.2.min.js')); ?>" type="text/javascript"></script>
+    <script src="<?php echo e(asset('sximo/themes/420/js/jquery-ui.min.js')); ?>" type="text/javascript"></script>
+    <script src="<?php echo e(asset('sximo/themes/420/js/plugin/jquery.easing.js')); ?>" type="text/javascript"></script>
+    <script src="<?php echo e(asset('sximo/themes/420/js/bootstrap.min.js')); ?>" type="text/javascript"></script>
+    <script src="<?php echo e(asset('sximo/themes/420/js/plugin/jquery.flexslider.js')); ?>" type="text/javascript"></script>
+    <script src="<?php echo e(asset('sximo/themes/420/js/plugin/background-check.min.js')); ?>" type="text/javascript"></script>
+    <script src="<?php echo e(asset('sximo/themes/420/js/plugin/jquery.fitvids.js')); ?>" type="text/javascript"></script>
+    <script src="<?php echo e(asset('sximo/themes/420/js/plugin/jquery.viewportchecker.js')); ?>" type="text/javascript"></script>
+    <script src="<?php echo e(asset('sximo/themes/420/js/plugin/jquery.stellar.min.js')); ?>" type="text/javascript"></script>
+    <script src="<?php echo e(asset('sximo/themes/420/js/plugin/wow.min.js')); ?>" type="text/javascript"></script>
+    <script src="<?php echo e(asset('sximo/themes/420/js/plugin/jquery.colorbox-min.js')); ?>" type="text/javascript"></script>
+    <script src="<?php echo e(asset('sximo/themes/420/js/plugin/owl.carousel.min.js')); ?>" type="text/javascript"></script>
+    <script src="<?php echo e(asset('sximo/themes/420/js/plugin/isotope.pkgd.min.js')); ?>" type="text/javascript"></script>
+    <script src="<?php echo e(asset('sximo/themes/420/js/plugin/masonry.pkgd.min.js')); ?>" type="text/javascript"></script>
+    <script src="<?php echo e(asset('sximo/themes/420/js/plugin/imagesloaded.pkgd.min.js')); ?>" type="text/javascript"></script>
+    <script src="<?php echo e(asset('sximo/themes/420/js/plugin/jPushMenu.js')); ?>" type="text/javascript"></script>
+    <script src="<?php echo e(asset('sximo/themes/420/js/plugin/jquery.fs.tipper.min.js')); ?>" type="text/javascript"></script>
+    <script src="<?php echo e(asset('sximo/themes/420/js/plugin/mediaelement-and-player.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('sximo/themes/420/js/theme.js')); ?>" type="text/javascript"></script>
+    <script src="<?php echo e(asset('sximo/themes/420/js/navigation.js')); ?>" type="text/javascript"></script>
+    <script src="//use.typekit.net/jqj6cmj.js')}}"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+</html>
+
+
+<script type="text/javascript">
+    (function() {
+        var path = '//easy.myfonts.net/v2/js?sid=263498(font-family=Boucherie+Sans)&sid=263503(font-family=Boucherie+Cursive)&sid=263508(font-family=Boucherie+Cursive+Bold)&key=NQdrvX5hL5',
+            protocol = ('https:' == document.location.protocol ? 'https:' : 'http:'),
+            trial = document.createElement('script');
+        trial.type = 'text/javascript';
+        trial.async = true;
+        trial.src = protocol + path;
+        var head = document.getElementsByTagName("head")[0];
+        head.appendChild(trial);
+    })();
+</script>
