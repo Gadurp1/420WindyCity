@@ -5,7 +5,7 @@
                     Route::controller('productcategories', 'ProductcategoriesController');
                     Route::controller('productsizescontroller', 'ProductsizescontrollerController');
                     Route::controller('legalresources', 'LegalresourcesController');
-                    Route::controller('products', 'ProductsController');
                     Route::controller('lawquestions', 'LawquestionsController');
                     Route::controller('blog', 'BlogController');
+                    Route::controller('products', 'ProductsController');
                     ?>

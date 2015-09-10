@@ -16,7 +16,7 @@ class ProductsController extends Controller {
 
 	public function __construct()
 	{
-		
+		parent::__construct();
 		$this->beforeFilter('csrf', array('on'=>'post'));
 		$this->model = new Products();
 		
@@ -109,6 +109,7 @@ class ProductsController extends Controller {
 		} else {
 			$this->data['row'] = $this->model->getColumnTable('bsc_products'); 
 		}
+		$this->data['fields'] =  \AjaxHelpers::fieldLang($this->info['config']['forms']);
 
 		
 		$this->data['id'] = $id;
@@ -129,6 +130,7 @@ class ProductsController extends Controller {
 		} else {
 			$this->data['row'] = $this->model->getColumnTable('bsc_products'); 
 		}
+		$this->data['fields'] =  \AjaxHelpers::fieldLang($this->info['config']['forms']);
 		
 		$this->data['id'] = $id;
 		$this->data['access']		= $this->access;

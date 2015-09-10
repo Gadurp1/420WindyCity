@@ -31,8 +31,10 @@
 <div class="col-md-12">
 						<fieldset><legend> Products</legend>
 									
-								  <div class="form-group  " >
-									<label for="Id" class=" control-label col-md-4 text-left"> Id </label>
+								  <div class="form-group  " > 
+									<label for="Id" class=" control-label col-md-4 text-left"> 
+									{!! SiteHelpers::activeLang('Id', (isset($fields['id']['language'])? $fields['id']['language'] : array())) !!}	
+									</label>
 									<div class="col-md-6">
 									  {!! Form::text('id', $row['id'],array('class'=>'form-control', 'placeholder'=>'',   )) !!} 
 									 </div> 
@@ -40,8 +42,10 @@
 									 	
 									 </div>
 								  </div> 					
-								  <div class="form-group  " >
-									<label for="IdCategory" class=" control-label col-md-4 text-left"> IdCategory </label>
+								  <div class="form-group  " > 
+									<label for="IdCategory" class=" control-label col-md-4 text-left"> 
+									{!! SiteHelpers::activeLang('IdCategory', (isset($fields['idCategory']['language'])? $fields['idCategory']['language'] : array())) !!}	
+									</label>
 									<div class="col-md-6">
 									  {!! Form::text('idCategory', $row['idCategory'],array('class'=>'form-control', 'placeholder'=>'',   )) !!} 
 									 </div> 
@@ -49,8 +53,10 @@
 									 	
 									 </div>
 								  </div> 					
-								  <div class="form-group  " >
-									<label for="ProductCode" class=" control-label col-md-4 text-left"> ProductCode </label>
+								  <div class="form-group  " > 
+									<label for="ProductCode" class=" control-label col-md-4 text-left"> 
+									{!! SiteHelpers::activeLang('ProductCode', (isset($fields['productCode']['language'])? $fields['productCode']['language'] : array())) !!}	
+									</label>
 									<div class="col-md-6">
 									  {!! Form::text('productCode', $row['productCode'],array('class'=>'form-control', 'placeholder'=>'',   )) !!} 
 									 </div> 
@@ -58,50 +64,43 @@
 									 	
 									 </div>
 								  </div> 					
-								  <div class="form-group  " >
-									<label for="Img" class=" control-label col-md-4 text-left"> Img </label>
+								  <div class="form-group  " > 
+									<label for="Img" class=" control-label col-md-4 text-left"> 
+									{!! SiteHelpers::activeLang('Img', (isset($fields['img']['language'])? $fields['img']['language'] : array())) !!}	
+									</label>
 									<div class="col-md-6">
-									  <input  type='file' name='img' id='img' @if($row['img'] =='') class='required' @endif style='width:150px !important;'  />
-					 	<div >
-						{!! SiteHelpers::showUploadedFile($row['img'],'') !!}
-						
-						</div>					
-					 
+									  {!! Form::text('img', $row['img'],array('class'=>'form-control', 'placeholder'=>'',   )) !!} 
 									 </div> 
 									 <div class="col-md-2">
-									 	<a href="#" data-toggle="tooltip" placement="left" class="tips" title="Pop-Up Image"><i class="icon-question2"></i></a>
+									 	
 									 </div>
 								  </div> 					
-								  <div class="form-group  " >
-									<label for="Img Detail1" class=" control-label col-md-4 text-left"> Img Detail1 </label>
+								  <div class="form-group  " > 
+									<label for="Img Detail1" class=" control-label col-md-4 text-left"> 
+									{!! SiteHelpers::activeLang('Img Detail1', (isset($fields['img_detail1']['language'])? $fields['img_detail1']['language'] : array())) !!}	
+									</label>
 									<div class="col-md-6">
-									  <input  type='file' name='img_detail1' id='img_detail1' @if($row['img_detail1'] =='') class='required' @endif style='width:150px !important;'  />
-					 	<div >
-						{!! SiteHelpers::showUploadedFile($row['img_detail1'],'') !!}
-						
-						</div>					
-					 
+									  {!! Form::text('img_detail1', $row['img_detail1'],array('class'=>'form-control', 'placeholder'=>'',   )) !!} 
 									 </div> 
 									 <div class="col-md-2">
-									 	<a href="#" data-toggle="tooltip" placement="left" class="tips" title="Image Detail"><i class="icon-question2"></i></a>
+									 	
 									 </div>
 								  </div> 					
-								  <div class="form-group  " >
-									<label for="Img Detail2" class=" control-label col-md-4 text-left"> Img Detail2 </label>
+								  <div class="form-group  " > 
+									<label for="Img Detail2" class=" control-label col-md-4 text-left"> 
+									{!! SiteHelpers::activeLang('Img Detail2', (isset($fields['img_detail2']['language'])? $fields['img_detail2']['language'] : array())) !!}	
+									</label>
 									<div class="col-md-6">
-									  <input  type='file' name='img_detail2' id='img_detail2' @if($row['img_detail2'] =='') class='required' @endif style='width:150px !important;'  />
-					 	<div >
-						{!! SiteHelpers::showUploadedFile($row['img_detail2'],'') !!}
-						
-						</div>					
-					 
+									  {!! Form::text('img_detail2', $row['img_detail2'],array('class'=>'form-control', 'placeholder'=>'',   )) !!} 
 									 </div> 
 									 <div class="col-md-2">
-									 	<a href="#" data-toggle="tooltip" placement="left" class="tips" title="Image Detail 2"><i class="icon-question2"></i></a>
+									 	
 									 </div>
 								  </div> 					
-								  <div class="form-group  " >
-									<label for="Img Detail3" class=" control-label col-md-4 text-left"> Img Detail3 </label>
+								  <div class="form-group  " > 
+									<label for="Img Detail3" class=" control-label col-md-4 text-left"> 
+									{!! SiteHelpers::activeLang('Img Detail3', (isset($fields['img_detail3']['language'])? $fields['img_detail3']['language'] : array())) !!}	
+									</label>
 									<div class="col-md-6">
 									  {!! Form::text('img_detail3', $row['img_detail3'],array('class'=>'form-control', 'placeholder'=>'',   )) !!} 
 									 </div> 
@@ -109,8 +108,10 @@
 									 	
 									 </div>
 								  </div> 					
-								  <div class="form-group  " >
-									<label for="Name" class=" control-label col-md-4 text-left"> Name </label>
+								  <div class="form-group  " > 
+									<label for="Name" class=" control-label col-md-4 text-left"> 
+									{!! SiteHelpers::activeLang('Name', (isset($fields['name']['language'])? $fields['name']['language'] : array())) !!}	
+									</label>
 									<div class="col-md-6">
 									  {!! Form::text('name', $row['name'],array('class'=>'form-control', 'placeholder'=>'',   )) !!} 
 									 </div> 
@@ -118,36 +119,21 @@
 									 	
 									 </div>
 								  </div> 					
-								  <div class="form-group  " >
-									<label for="Description" class=" control-label col-md-4 text-left"> Description </label>
+								  <div class="form-group  " > 
+									<label for="Description" class=" control-label col-md-4 text-left"> 
+									{!! SiteHelpers::activeLang('Description', (isset($fields['description']['language'])? $fields['description']['language'] : array())) !!}	
+									</label>
 									<div class="col-md-6">
-									  <textarea name='description' rows='5' id='editor' class='form-control editor '  
-						 >{{ $row['description'] }}</textarea> 
+									  {!! Form::text('description', $row['description'],array('class'=>'form-control', 'placeholder'=>'',   )) !!} 
 									 </div> 
 									 <div class="col-md-2">
 									 	
 									 </div>
 								  </div> 					
-								  <div class="form-group  " >
-									<label for="Price" class=" control-label col-md-4 text-left"> Price </label>
-									<div class="col-md-6">
-									  {!! Form::text('price', $row['price'],array('class'=>'form-control', 'placeholder'=>'',   )) !!} 
-									 </div> 
-									 <div class="col-md-2">
-									 	
-									 </div>
-								  </div> 					
-								  <div class="form-group  " >
-									<label for="Price Offer" class=" control-label col-md-4 text-left"> Price Offer </label>
-									<div class="col-md-6">
-									  {!! Form::text('price_offer', $row['price_offer'],array('class'=>'form-control', 'placeholder'=>'',   )) !!} 
-									 </div> 
-									 <div class="col-md-2">
-									 	
-									 </div>
-								  </div> 					
-								  <div class="form-group  " >
-									<label for="Download" class=" control-label col-md-4 text-left"> Download </label>
+								  <div class="form-group  " > 
+									<label for="Download" class=" control-label col-md-4 text-left"> 
+									{!! SiteHelpers::activeLang('Download', (isset($fields['download']['language'])? $fields['download']['language'] : array())) !!}	
+									</label>
 									<div class="col-md-6">
 									  {!! Form::text('download', $row['download'],array('class'=>'form-control', 'placeholder'=>'',   )) !!} 
 									 </div> 
@@ -155,8 +141,10 @@
 									 	
 									 </div>
 								  </div> 					
-								  <div class="form-group  " >
-									<label for="Ordering" class=" control-label col-md-4 text-left"> Ordering </label>
+								  <div class="form-group  " > 
+									<label for="Ordering" class=" control-label col-md-4 text-left"> 
+									{!! SiteHelpers::activeLang('Ordering', (isset($fields['ordering']['language'])? $fields['ordering']['language'] : array())) !!}	
+									</label>
 									<div class="col-md-6">
 									  {!! Form::text('ordering', $row['ordering'],array('class'=>'form-control', 'placeholder'=>'',   )) !!} 
 									 </div> 
@@ -164,8 +152,10 @@
 									 	
 									 </div>
 								  </div> 					
-								  <div class="form-group  " >
-									<label for="Visible" class=" control-label col-md-4 text-left"> Visible </label>
+								  <div class="form-group  " > 
+									<label for="Visible" class=" control-label col-md-4 text-left"> 
+									{!! SiteHelpers::activeLang('Visible', (isset($fields['visible']['language'])? $fields['visible']['language'] : array())) !!}	
+									</label>
 									<div class="col-md-6">
 									  {!! Form::text('visible', $row['visible'],array('class'=>'form-control', 'placeholder'=>'',   )) !!} 
 									 </div> 

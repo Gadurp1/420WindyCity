@@ -27,18 +27,33 @@
 	</div>
 	<div class="sbox-content"> 	
 	    <div class="toolbar-line ">
-			<?php if($access['is_add'] ==1): ?>
-	   		<a href="<?php echo e(URL::to('products/update')); ?>" class="tips btn btn-sm btn-white"  title="<?php echo e(Lang::get('core.btn_create')); ?>">
-			<i class="fa fa-plus-circle "></i>&nbsp;<?php echo e(Lang::get('core.btn_create')); ?></a>
-			<?php endif; ?>  
-			<?php if($access['is_remove'] ==1): ?>
-			<a href="javascript://ajax"  onclick="SximoDelete();" class="tips btn btn-sm btn-white" title="<?php echo e(Lang::get('core.btn_remove')); ?>">
-			<i class="fa fa-minus-circle "></i>&nbsp;<?php echo e(Lang::get('core.btn_remove')); ?></a>
-			<?php endif; ?> 		
-			<?php if($access['is_excel'] ==1): ?>
-			<a href="<?php echo e(URL::to('products/download')); ?>" class="tips btn btn-sm btn-white" title="<?php echo e(Lang::get('core.btn_download')); ?>">
-			<i class="fa fa-download"></i>&nbsp;<?php echo e(Lang::get('core.btn_download')); ?> </a>
-			<?php endif; ?>			
+	   	 	<div class="col-md-6">
+				<?php if($access['is_add'] ==1): ?>
+		   		<a href="<?php echo e(URL::to('products/update')); ?>" class="tips btn btn-sm btn-white"  title="<?php echo e(Lang::get('core.btn_create')); ?>">
+				<i class="fa fa-plus-circle "></i>&nbsp;<?php echo e(Lang::get('core.btn_create')); ?></a>
+				<?php endif; ?>  
+				<?php if($access['is_remove'] ==1): ?>
+				<a href="javascript://ajax"  onclick="SximoDelete();" class="tips btn btn-sm btn-white" title="<?php echo e(Lang::get('core.btn_remove')); ?>">
+				<i class="fa fa-minus-circle "></i>&nbsp;<?php echo e(Lang::get('core.btn_remove')); ?></a>
+				<?php endif; ?> 		
+				<?php if($access['is_excel'] ==1): ?>
+				<a href="<?php echo e(URL::to('products/download')); ?>" class="tips btn btn-sm btn-white" title="<?php echo e(Lang::get('core.btn_download')); ?>">
+				<i class="fa fa-download"></i>&nbsp;<?php echo e(Lang::get('core.btn_download')); ?> </a>
+				<?php endif; ?>	
+
+			</div>
+
+			<div class="col-md-6 "> 
+				<?php if($access['is_excel'] ==1): ?>
+				<div class="pull-right">
+					<a href="<?php echo e(URL::to( $pageModule .'/export/excel?return='.$return)); ?>" class="btn btn-sm btn-white"> Excel</a>
+					<a href="<?php echo e(URL::to( $pageModule .'/export/word?return='.$return)); ?>" class="btn btn-sm btn-white"> Word </a>
+					<a href="<?php echo e(URL::to( $pageModule .'/export/csv?return='.$return)); ?>" class="btn btn-sm btn-white"> CSV </a>
+					<a href="<?php echo e(URL::to( $pageModule .'/export/print?return='.$return)); ?>" class="btn btn-sm btn-white" onclick="ajaxPopupStatic(this.href); return false;" > Print</a>
+				</div>	
+				<?php endif; ?>
+			</div>	
+			<div class="clr clear"></div>				
 		 
 		</div> 		
 
@@ -55,7 +70,7 @@
 				
 				<?php foreach($tableGrid as $t): ?>
 					<?php if($t['view'] =='1'): ?>
-						<th><?php echo e($t['label']); ?></th>
+						<th><?php echo e(SiteHelpers::activeLang($t['label'],(isset($t['language'])? $t['language'] : array()))); ?></th>
 					<?php endif; ?>
 				<?php endforeach; ?>
 				<th width="70" ><?php echo e(Lang::get('core.btn_action')); ?></th>

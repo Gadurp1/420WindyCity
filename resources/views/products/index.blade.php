@@ -29,18 +29,33 @@
 	</div>
 	<div class="sbox-content"> 	
 	    <div class="toolbar-line ">
-			@if($access['is_add'] ==1)
-	   		<a href="{{ URL::to('products/update') }}" class="tips btn btn-sm btn-white"  title="{{ Lang::get('core.btn_create') }}">
-			<i class="fa fa-plus-circle "></i>&nbsp;{{ Lang::get('core.btn_create') }}</a>
-			@endif  
-			@if($access['is_remove'] ==1)
-			<a href="javascript://ajax"  onclick="SximoDelete();" class="tips btn btn-sm btn-white" title="{{ Lang::get('core.btn_remove') }}">
-			<i class="fa fa-minus-circle "></i>&nbsp;{{ Lang::get('core.btn_remove') }}</a>
-			@endif 		
-			@if($access['is_excel'] ==1)
-			<a href="{{ URL::to('products/download') }}" class="tips btn btn-sm btn-white" title="{{ Lang::get('core.btn_download') }}">
-			<i class="fa fa-download"></i>&nbsp;{{ Lang::get('core.btn_download') }} </a>
-			@endif			
+	   	 	<div class="col-md-6">
+				@if($access['is_add'] ==1)
+		   		<a href="{{ URL::to('products/update') }}" class="tips btn btn-sm btn-white"  title="{{ Lang::get('core.btn_create') }}">
+				<i class="fa fa-plus-circle "></i>&nbsp;{{ Lang::get('core.btn_create') }}</a>
+				@endif  
+				@if($access['is_remove'] ==1)
+				<a href="javascript://ajax"  onclick="SximoDelete();" class="tips btn btn-sm btn-white" title="{{ Lang::get('core.btn_remove') }}">
+				<i class="fa fa-minus-circle "></i>&nbsp;{{ Lang::get('core.btn_remove') }}</a>
+				@endif 		
+				@if($access['is_excel'] ==1)
+				<a href="{{ URL::to('products/download') }}" class="tips btn btn-sm btn-white" title="{{ Lang::get('core.btn_download') }}">
+				<i class="fa fa-download"></i>&nbsp;{{ Lang::get('core.btn_download') }} </a>
+				@endif	
+
+			</div>
+
+			<div class="col-md-6 "> 
+				@if($access['is_excel'] ==1)
+				<div class="pull-right">
+					<a href="{{ URL::to( $pageModule .'/export/excel?return='.$return) }}" class="btn btn-sm btn-white"> Excel</a>
+					<a href="{{ URL::to( $pageModule .'/export/word?return='.$return) }}" class="btn btn-sm btn-white"> Word </a>
+					<a href="{{ URL::to( $pageModule .'/export/csv?return='.$return) }}" class="btn btn-sm btn-white"> CSV </a>
+					<a href="{{ URL::to( $pageModule .'/export/print?return='.$return) }}" class="btn btn-sm btn-white" onclick="ajaxPopupStatic(this.href); return false;" > Print</a>
+				</div>	
+				@endif
+			</div>	
+			<div class="clr clear"></div>				
 		 
 		</div> 		
 
@@ -56,7 +71,7 @@
 				
 				@foreach ($tableGrid as $t)
 					@if($t['view'] =='1')
-						<th>{{ $t['label'] }}</th>
+						<th>{{ SiteHelpers::activeLang($t['label'],(isset($t['language'])? $t['language'] : array())) }}</th>
 					@endif
 				@endforeach
 				<th width="70" >{{ Lang::get('core.btn_action') }}</th>

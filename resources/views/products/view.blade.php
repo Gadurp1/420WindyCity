@@ -32,85 +32,97 @@
 		<tbody>	
 	
 					<tr>
-						<td width='30%' class='label-view text-right'>Id</td>
+						<td width='30%' class='label-view text-right'>
+							{{ SiteHelpers::activeLang('Id', (isset($fields['id']['language'])? $fields['id']['language'] : array())) }}	
+						</td>
 						<td>{{ $row->id }} </td>
 						
 					</tr>
 				
 					<tr>
-						<td width='30%' class='label-view text-right'>IdCategory</td>
+						<td width='30%' class='label-view text-right'>
+							{{ SiteHelpers::activeLang('IdCategory', (isset($fields['idCategory']['language'])? $fields['idCategory']['language'] : array())) }}	
+						</td>
 						<td>{{ $row->idCategory }} </td>
 						
 					</tr>
 				
 					<tr>
-						<td width='30%' class='label-view text-right'>ProductCode</td>
+						<td width='30%' class='label-view text-right'>
+							{{ SiteHelpers::activeLang('ProductCode', (isset($fields['productCode']['language'])? $fields['productCode']['language'] : array())) }}	
+						</td>
 						<td>{{ $row->productCode }} </td>
 						
 					</tr>
 				
 					<tr>
-						<td width='30%' class='label-view text-right'>Img</td>
+						<td width='30%' class='label-view text-right'>
+							{{ SiteHelpers::activeLang('Img', (isset($fields['img']['language'])? $fields['img']['language'] : array())) }}	
+						</td>
 						<td>{{ $row->img }} </td>
 						
 					</tr>
 				
 					<tr>
-						<td width='30%' class='label-view text-right'>Img Detail1</td>
+						<td width='30%' class='label-view text-right'>
+							{{ SiteHelpers::activeLang('Img Detail1', (isset($fields['img_detail1']['language'])? $fields['img_detail1']['language'] : array())) }}	
+						</td>
 						<td>{{ $row->img_detail1 }} </td>
 						
 					</tr>
 				
 					<tr>
-						<td width='30%' class='label-view text-right'>Img Detail2</td>
+						<td width='30%' class='label-view text-right'>
+							{{ SiteHelpers::activeLang('Img Detail2', (isset($fields['img_detail2']['language'])? $fields['img_detail2']['language'] : array())) }}	
+						</td>
 						<td>{{ $row->img_detail2 }} </td>
 						
 					</tr>
 				
 					<tr>
-						<td width='30%' class='label-view text-right'>Img Detail3</td>
+						<td width='30%' class='label-view text-right'>
+							{{ SiteHelpers::activeLang('Img Detail3', (isset($fields['img_detail3']['language'])? $fields['img_detail3']['language'] : array())) }}	
+						</td>
 						<td>{{ $row->img_detail3 }} </td>
 						
 					</tr>
 				
 					<tr>
-						<td width='30%' class='label-view text-right'>Name</td>
+						<td width='30%' class='label-view text-right'>
+							{{ SiteHelpers::activeLang('Name', (isset($fields['name']['language'])? $fields['name']['language'] : array())) }}	
+						</td>
 						<td>{{ $row->name }} </td>
 						
 					</tr>
 				
 					<tr>
-						<td width='30%' class='label-view text-right'>Description</td>
+						<td width='30%' class='label-view text-right'>
+							{{ SiteHelpers::activeLang('Description', (isset($fields['description']['language'])? $fields['description']['language'] : array())) }}	
+						</td>
 						<td>{{ $row->description }} </td>
 						
 					</tr>
 				
 					<tr>
-						<td width='30%' class='label-view text-right'>Price</td>
-						<td>{{ $row->price }} </td>
-						
-					</tr>
-				
-					<tr>
-						<td width='30%' class='label-view text-right'>Price Offer</td>
-						<td>{{ $row->price_offer }} </td>
-						
-					</tr>
-				
-					<tr>
-						<td width='30%' class='label-view text-right'>Download</td>
+						<td width='30%' class='label-view text-right'>
+							{{ SiteHelpers::activeLang('Download', (isset($fields['download']['language'])? $fields['download']['language'] : array())) }}	
+						</td>
 						<td>{{ $row->download }} </td>
 						
 					</tr>
 				
 					<tr>
-						<td width='30%' class='label-view text-right'>Ordering</td>
+						<td width='30%' class='label-view text-right'>
+							{{ SiteHelpers::activeLang('Ordering', (isset($fields['ordering']['language'])? $fields['ordering']['language'] : array())) }}	
+						</td>
 						<td>{{ $row->ordering }} </td>
 						
 					</tr>
 				
 					<tr>
-						<td width='30%' class='label-view text-right'>Visible</td>
+						<td width='30%' class='label-view text-right'>
+							{{ SiteHelpers::activeLang('Visible', (isset($fields['visible']['language'])? $fields['visible']['language'] : array())) }}	
+						</td>
 						<td>{{ $row->visible }} </td>
 						
 					</tr>
