@@ -30,17 +30,21 @@
 <div class="col-md-12">
 						<fieldset><legend> Blog Categories</legend>
 									
-								  <div class="form-group  " >
-									<label for="CatID" class=" control-label col-md-4 text-left"> CatID </label>
+								  <div class="form-group  " > 
+									<label for="Id" class=" control-label col-md-4 text-left"> 
+									<?php echo SiteHelpers::activeLang('Id', (isset($fields['id']['language'])? $fields['id']['language'] : array())); ?>	
+									</label>
 									<div class="col-md-6">
-									  <?php echo Form::text('CatID', $row['CatID'],array('class'=>'form-control', 'placeholder'=>'',   )); ?> 
+									  <?php echo Form::text('id', $row['id'],array('class'=>'form-control', 'placeholder'=>'',   )); ?> 
 									 </div> 
 									 <div class="col-md-2">
 									 	
 									 </div>
 								  </div> 					
-								  <div class="form-group  " >
-									<label for="Name" class=" control-label col-md-4 text-left"> Name </label>
+								  <div class="form-group  " > 
+									<label for="Name" class=" control-label col-md-4 text-left"> 
+									<?php echo SiteHelpers::activeLang('Name', (isset($fields['name']['language'])? $fields['name']['language'] : array())); ?>	
+									</label>
 									<div class="col-md-6">
 									  <?php echo Form::text('name', $row['name'],array('class'=>'form-control', 'placeholder'=>'',   )); ?> 
 									 </div> 
@@ -48,19 +52,39 @@
 									 	
 									 </div>
 								  </div> 					
-								  <div class="form-group  " >
-									<label for="Alias" class=" control-label col-md-4 text-left"> Alias </label>
+								  <div class="form-group  " > 
+									<label for="Description" class=" control-label col-md-4 text-left"> 
+									<?php echo SiteHelpers::activeLang('Description', (isset($fields['description']['language'])? $fields['description']['language'] : array())); ?>	
+									</label>
 									<div class="col-md-6">
-									  <?php echo Form::text('alias', $row['alias'],array('class'=>'form-control', 'placeholder'=>'',   )); ?> 
+									  <textarea name='description' rows='5' id='editor' class='form-control editor '  
+						 ><?php echo e($row['description']); ?></textarea> 
 									 </div> 
 									 <div class="col-md-2">
 									 	
 									 </div>
 								  </div> 					
-								  <div class="form-group  " >
-									<label for="Enable" class=" control-label col-md-4 text-left"> Enable </label>
+								  <div class="form-group  " > 
+									<label for="Ordering" class=" control-label col-md-4 text-left"> 
+									<?php echo SiteHelpers::activeLang('Ordering', (isset($fields['ordering']['language'])? $fields['ordering']['language'] : array())); ?>	
+									</label>
 									<div class="col-md-6">
-									  <?php echo Form::text('enable', $row['enable'],array('class'=>'form-control', 'placeholder'=>'',   )); ?> 
+									  <?php echo Form::text('ordering', $row['ordering'],array('class'=>'form-control', 'placeholder'=>'',   )); ?> 
+									 </div> 
+									 <div class="col-md-2">
+									 	
+									 </div>
+								  </div> 					
+								  <div class="form-group  " > 
+									<label for="Visible" class=" control-label col-md-4 text-left"> 
+									<?php echo SiteHelpers::activeLang('Visible', (isset($fields['visible']['language'])? $fields['visible']['language'] : array())); ?>	
+									</label>
+									<div class="col-md-6">
+									  
+					<label class='radio radio-inline'>
+					<input type='radio' name='visible' value ='0'  <?php if($row['visible'] == '0'): ?> checked="checked" <?php endif; ?> > Hidden </label>
+					<label class='radio radio-inline'>
+					<input type='radio' name='visible' value ='1'  <?php if($row['visible'] == '1'): ?> checked="checked" <?php endif; ?> > Visible </label> 
 									 </div> 
 									 <div class="col-md-2">
 									 	

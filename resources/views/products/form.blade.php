@@ -80,7 +80,12 @@
 									{!! SiteHelpers::activeLang('Img Detail1', (isset($fields['img_detail1']['language'])? $fields['img_detail1']['language'] : array())) !!}	
 									</label>
 									<div class="col-md-6">
-									  {!! Form::text('img_detail1', $row['img_detail1'],array('class'=>'form-control', 'placeholder'=>'',   )) !!} 
+									  <input  type='file' name='img_detail1' id='img_detail1' @if($row['img_detail1'] =='') class='required' @endif style='width:150px !important;'  />
+					 	<div >
+						{!! SiteHelpers::showUploadedFile($row['img_detail1'],'') !!}
+						
+						</div>					
+					 
 									 </div> 
 									 <div class="col-md-2">
 									 	
@@ -91,7 +96,12 @@
 									{!! SiteHelpers::activeLang('Img Detail2', (isset($fields['img_detail2']['language'])? $fields['img_detail2']['language'] : array())) !!}	
 									</label>
 									<div class="col-md-6">
-									  {!! Form::text('img_detail2', $row['img_detail2'],array('class'=>'form-control', 'placeholder'=>'',   )) !!} 
+									  <input  type='file' name='img_detail2' id='img_detail2' @if($row['img_detail2'] =='') class='required' @endif style='width:150px !important;'  />
+					 	<div >
+						{!! SiteHelpers::showUploadedFile($row['img_detail2'],'') !!}
+						
+						</div>					
+					 
 									 </div> 
 									 <div class="col-md-2">
 									 	
@@ -102,7 +112,12 @@
 									{!! SiteHelpers::activeLang('Img Detail3', (isset($fields['img_detail3']['language'])? $fields['img_detail3']['language'] : array())) !!}	
 									</label>
 									<div class="col-md-6">
-									  {!! Form::text('img_detail3', $row['img_detail3'],array('class'=>'form-control', 'placeholder'=>'',   )) !!} 
+									  <input  type='file' name='img_detail3' id='img_detail3' @if($row['img_detail3'] =='') class='required' @endif style='width:150px !important;'  />
+					 	<div >
+						{!! SiteHelpers::showUploadedFile($row['img_detail3'],'') !!}
+						
+						</div>					
+					 
 									 </div> 
 									 <div class="col-md-2">
 									 	
@@ -124,7 +139,8 @@
 									{!! SiteHelpers::activeLang('Description', (isset($fields['description']['language'])? $fields['description']['language'] : array())) !!}	
 									</label>
 									<div class="col-md-6">
-									  {!! Form::text('description', $row['description'],array('class'=>'form-control', 'placeholder'=>'',   )) !!} 
+									  <textarea name='description' rows='5' id='editor' class='form-control editor '  
+						 >{{ $row['description'] }}</textarea> 
 									 </div> 
 									 <div class="col-md-2">
 									 	
@@ -157,7 +173,11 @@
 									{!! SiteHelpers::activeLang('Visible', (isset($fields['visible']['language'])? $fields['visible']['language'] : array())) !!}	
 									</label>
 									<div class="col-md-6">
-									  {!! Form::text('visible', $row['visible'],array('class'=>'form-control', 'placeholder'=>'',   )) !!} 
+									  
+					<label class='radio radio-inline'>
+					<input type='radio' name='visible' value ='0'  @if($row['visible'] == '0') checked="checked" @endif > Hidden </label>
+					<label class='radio radio-inline'>
+					<input type='radio' name='visible' value ='1'  @if($row['visible'] == '1') checked="checked" @endif > Visible </label> 
 									 </div> 
 									 <div class="col-md-2">
 									 	

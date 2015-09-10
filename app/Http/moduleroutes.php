@@ -8,4 +8,5 @@
                     Route::controller('lawquestions', 'LawquestionsController');
                     Route::controller('blog', 'BlogController');
                     Route::controller('products', 'ProductsController');
+                    Route::controller('blogcategories', 'BlogcategoriesController');
                     ?>
