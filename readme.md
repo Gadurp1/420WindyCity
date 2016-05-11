@@ -10,7 +10,7 @@ Run "npm install" to download dependencies.
 
 ## Installation
 
-``` In the terminal:
+```In the terminal:
 git clone git@github.com:tallarium/mercury.git
 cd mercury
 npm install
