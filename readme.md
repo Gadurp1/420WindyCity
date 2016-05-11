@@ -1,3 +1,3 @@
 ### Installation ###
 
-Run NPM Install to download dependencies.
+Run "npm install" to download dependencies.
