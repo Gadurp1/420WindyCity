@@ -12,6 +12,6 @@ Run "npm install" to download dependencies.
 
 ```bash
 git clone git@github.com:tallarium/mercury.git
-cd mercury
+cd 420windycity
 npm install
 ```
