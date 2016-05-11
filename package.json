@@ -1,5 +1,24 @@
 {
+  "name": "420 Windy City",
+  "version": "0.2.0",
+  "description": "420 Windy City Front-End Site",
   "private": true,
+  "repositoy": "Gadurp1/420windycity",
+  "author": {
+    "name": "420 Windy City",
+    "url": "http://420windycity.com/"
+  },
+  "contributors": [
+    {
+      "name": "Anthony Saviano",
+      "email": "anthonydsaviano@gmail.com "
+    },
+    {
+      "name": "Jon Leibham",
+      "email": "jleibham@gmail.com"
+    }
+  ],
+  "license": "UNLICENSED",
   "devDependencies": {
     "gulp": "^3.8.8",
     "laravel-elixir": "^1.0.0"
